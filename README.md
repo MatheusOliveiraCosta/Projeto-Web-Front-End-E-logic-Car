@@ -1,6 +1,6 @@
 <h1 align="center"> E-logic Car </h1>
 <p align="center">
-<img width="200" height="200" alt="Logo Image" src="https://github.com/user-attachments/assets/d9264f10-bab1-42b9-8514-ca4c69721fb0" />
+<img width="100" height="100" alt="Logo Image" src="https://github.com/user-attachments/assets/d9264f10-bab1-42b9-8514-ca4c69721fb0" />
 </p>
 
 
