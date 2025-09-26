@@ -4,7 +4,7 @@
 
 * **Matheus Oliveira Costa**
 
-![Status](https://img.shields.io/badge/status-em-desenvolvimento-brightgreen)
+![Status](//img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 > Projeto 1 de HTML e CSS: Uma plataforma de e-commerce conceitual para veículos elétricos, focada em promover a mobilidade sustentável e educar o consumidor sobre os benefícios da eletrificação.
 
