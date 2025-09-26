@@ -1,6 +1,10 @@
-# E-Logic Car 🚗⚡
+<h1 align="center"> E-logic Car </h1>
 
-![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+## 👨‍💻 Integrante da Equipe
+
+* **Matheus Oliveira Costa**
+
+![Status](https://img.shields.io/badge/status-em-desenvolvimento-brightgreen)
 
 > Projeto 1 de HTML e CSS: Uma plataforma de e-commerce conceitual para veículos elétricos, focada em promover a mobilidade sustentável e educar o consumidor sobre os benefícios da eletrificação.
 
@@ -20,7 +24,7 @@
 
 ## 📖 Descrição do Projeto
 
-**E-Logic Car** é uma plataforma web desenvolvida como parte do Projeto 1 da disciplina de [Nome da Disciplina/Curso]. O site funciona como a vitrine de um e-commerce de carros elétricos, mas seu objetivo principal vai além da venda: buscamos ser um portal educativo que desmistifica a tecnologia dos veículos elétricos e reforça sua importância para um futuro mais sustentável.
+**E-Logic Car** é uma plataforma web desenvolvida como parte do Projeto 1 da disciplina de Programação Web Front-End. O site funciona como a vitrine de um e-commerce de carros elétricos, mas seu objetivo principal vai além da venda: buscamos ser um portal educativo que desmistifica a tecnologia dos veículos elétricos e reforça sua importância para um futuro mais sustentável.
 
 O projeto consiste em duas páginas principais:
 1.  **Página Principal:** Apresenta a missão da E-Logic Car, as vantagens da mobilidade elétrica e os modelos de veículos disponíveis.
@@ -33,9 +37,8 @@ O projeto consiste em duas páginas principais:
 * **Página Inicial (Home) Informativa:** Uma landing page que apresenta os benefícios ecológicos e econômicos dos carros elétricos.
 * **Catálogo de Veículos:** Exibição dos modelos de carros com imagens, descrições e especificações básicas.
 * **Formulário de Cadastro:** Uma página para capturar o interesse de potenciais clientes, com campos para contato e escolha do modelo.
+* **Campo de login:** Se o usuario quiser comprar um carro terá que fazer o login.
 * **Código Validado:** O código-fonte (HTML e CSS) foi validado utilizando as ferramentas oficiais do W3C, garantindo boas práticas de desenvolvimento.
-* **Links para Currículos:** O rodapé da página principal contém links para os currículos dos desenvolvedores do projeto.
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -48,27 +51,22 @@ O código foi validado de acordo com os seguintes critérios:
 * **HTML:** [W3C HTML Validator](https://validator.w3.org/)
 * **CSS:** [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)
 
----
-
 ## 📁 Estrutura do Projeto
 
-A estrutura de arquivos foi organizada da seguinte forma para manter o código limpo e de fácil manutenção:
+A estrutura de arquivos foi organizada da seguinte forma:
 
 ```
 e-logic-car/
 ├── index.html              # Página principal
 ├── cadastro.html           # Página de cadastro
-├── login.html              # Página de login (destino do formulário)
-└── assets/
-    ├── css/
-    │   └── style.css       # Folha de estilos principal
+├── login.html              # Página de login
+├── style.css       # Folha de estilos principal
     ├── images/
-    │   ├── carro-modelo-1.jpg
-    │   ├── logo.png
-    │   └── banner-principal.jpg
+    │   ├── ...
+    │   ├── ...
+    │   └── ...
     └── icons/
-        ├── leaf-icon.svg
-        └── battery-icon.svg
+        ├── ...
 ```
 
 ---
@@ -77,10 +75,10 @@ e-logic-car/
 
 Você pode acessar a versão publicada do projeto através do GitHub Pages no link abaixo:
 
-> **[Acessar o site E-Logic Car]([COLE O LINK DO SEU GITHUB PAGES AQUI])**
+> **[Acessar o site E-Logic Car]([LINK DO GITHUB PAGES])**
 
 #### Para rodar localmente:
-1.  Clone o repositório: `git clone [URL_DO_SEU_REPOSITORIO]`
+1.  Clone o repositório: `git clone [URL_DO_REPOSITORIO]`
 2.  Abra o arquivo `index.html` no seu navegador de preferência.
 
 ---
@@ -96,10 +94,3 @@ Este projeto foi desenhado para atender a um **Objetivo de Desenvolvimento Suste
     * A transição para a mobilidade elétrica é um passo fundamental para diminuir a pegada de carbono do setor de transportes, um dos maiores emissores de gases de efeito estufa.
 
 ---
-
-## 👨‍💻 Integrantes da Equipe
-
-* **[Nome Completo do Integrante 1]**
-* **[Nome Completo do Integrante 2]**
-* **[Nome Completo do Integrante 3]**
-* **[Adicione mais integrantes conforme necessário]**
