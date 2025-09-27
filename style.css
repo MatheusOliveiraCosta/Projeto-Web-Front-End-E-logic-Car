@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(241, 241, 241); 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+}
+
+h1{
+    margin-left: 55px;
+    margin-top: -53px;
+}
+
+.logo_png{
+    height: 60px;
+    width: 60px;
+    justify-content: flex-end;
+}
+
+.nav_bar{
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  padding-bottom: 1px;
+}
