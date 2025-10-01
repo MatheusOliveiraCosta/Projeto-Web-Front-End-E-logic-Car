@@ -3,13 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Logic Car</title>
+    <title>E-Logic Car - O Futuro é Elétrico</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icons\apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav_bar">
-        <img class="logo_png" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
-        <h1>E-Logic Car</h1>
+
+    <header class="cabecalho">
+        <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+        <h1 class="titulo">E-Logic Car</h1>
+        <nav>
+            <ul>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#vantagens">Vantagens</a></li>
+                <li><a href="cadastro.html">Test-Drive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+     <section class="banner">
+    <div class="carrossel-slide">
+        <img src="images\banner1.jpeg" alt="Carro elétrico azul, carregando">
+        <img src="images\banner2.jpeg" alt="Família feliz em carro elétrico">
+        <img src="images\banner3.jpeg" alt="Interior futurista de carro elétrico">
     </div>
+    </section>
+
+        <section id="vantagens" class="vantagens">
+            <div class="vantagem-item">
+                <img src="icons\recycling.png" alt="Ícone de sustentabilidade" class="icone">
+                
+                <h3>Sustentabilidade</h3>
+                <p>Reduza sua pegada de carbono com veículos de emissão zero.</p>
+            </div>
+            
+            <div class="vantagem-item">
+                <img src="icons\electric_car.png" alt="Ícone de economia" class="icone">
+                
+                <h3>Economia Real</h3>
+                <p>Economize em combustível e manutenção. A energia elétrica é mais barata e eficiente.</p>
+            </div>
+            
+            <div class="vantagem-item">
+                 <img src="icons\speed.png" alt="Ícone de performance" class="icone">
+                
+                <h3>Performance</h3>
+                <p>Experimente a aceleração instantânea e uma direção silenciosa e poderosa.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+        <a href="#">Política de Privacidade</a>
+    </footer>
+
 </body>
 </html>

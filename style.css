@@ -1,24 +1,117 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(241, 241, 241); 
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    padding: 0; 
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
 }
 
-h1{
-    margin-left: 55px;
-    margin-top: -53px;
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
 }
 
-.logo_png{
-    height: 60px;
+/*Estilos do cabeçalho de navegação*/
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    background-color: rgb(255, 255, 255); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*sombra*/
+}
+
+.logo {
     width: 60px;
-    justify-content: flex-end;
+    
 }
 
-.nav_bar{
-  align-items: center;
-  justify-content: center;
-  background-color: aqua;
-  padding-bottom: 1px;
+.titulo{
+    margin-right: 839px;
+    font-size: 20px;
+
+}
+
+.cabecalho nav ul {
+    list-style: none; 
+    display: flex;
+    gap: 20px; 
+}
+
+.cabecalho nav a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #1E88E5; 
+}
+
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden; /* Esconde as partes das imagens que estão fora da área visível */
+    position: relative; /* Necessário para posicionar o slide interno */
+    height: 300px; /* Altura fixa para o carrossel. Ajuste conforme necessário. */
+    margin-bottom: 40px; /* Espaço abaixo do carrossel */
+}
+
+.carrossel-slide {
+    display: flex; /* Organiza as imagens lado a lado */
+    width: 300%; /* 3 imagens, cada uma ocupando 100%, então 300% */
+    height: 100%;
+    
+    /* Animação para mover as imagens */
+    animation: slideShow 15s infinite ease-in-out; /* 15s para a animação completa, infinita */
+}
+
+.carrossel-slide img {
+    width: 100%; /* Cada imagem ocupa 100% da largura do .carrossel-container */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* Keyframes para a animação do carrossel */
+@keyframes slideShow {
+    0% { transform: translateX(0); } /* Começa na primeira imagem */
+    33% { transform: translateX(0); } /* Fica na primeira imagem por um tempo */
+    36% { transform: translateX(-100%); } /* Move para a segunda imagem */
+    66% { transform: translateX(-100%); } /* Fica na segunda imagem */
+    69% { transform: translateX(-200%); } /* Move para a terceira imagem */
+    97% { transform: translateX(-200%); } /* Fica na terceira imagem */
+    100% { transform: translateX(0); } /* Volta para a primeira para reiniciar o ciclo */
+}
+
+/*Seção de Vantagens*/
+.vantagens {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 30px;
+}
+
+.vantagem-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.icone {
+    width: 80px;  
+    margin-bottom: 15px;
+}
+
+/*Rodapé*/
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #333333; 
+    color: #F5F5F5;            
+}
+
+.rodape a {
+    color: #1E88E5; 
 }
