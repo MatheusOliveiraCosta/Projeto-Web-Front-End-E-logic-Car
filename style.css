@@ -51,39 +51,18 @@ h1, h2, h3 {
     color: #1E88E5; 
 }
 
-
-.carrossel-container {
+.banner {
     width: 100%;
-    overflow: hidden; /* Esconde as partes das imagens que estão fora da área visível */
-    position: relative; /* Necessário para posicionar o slide interno */
-    height: 300px; /* Altura fixa para o carrossel. Ajuste conforme necessário. */
-    margin-bottom: 40px; /* Espaço abaixo do carrossel */
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .carrossel-slide {
-    display: flex; /* Organiza as imagens lado a lado */
-    width: 300%; /* 3 imagens, cada uma ocupando 100%, então 300% */
+    display: flex;
+    width: 300%;
     height: 100%;
-    
-    /* Animação para mover as imagens */
-    animation: slideShow 15s infinite ease-in-out; /* 15s para a animação completa, infinita */
-}
-
-.carrossel-slide img {
-    width: 100%; /* Cada imagem ocupa 100% da largura do .carrossel-container */
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-}
-
-/* Keyframes para a animação do carrossel */
-@keyframes slideShow {
-    0% { transform: translateX(0); } /* Começa na primeira imagem */
-    33% { transform: translateX(0); } /* Fica na primeira imagem por um tempo */
-    36% { transform: translateX(-100%); } /* Move para a segunda imagem */
-    66% { transform: translateX(-100%); } /* Fica na segunda imagem */
-    69% { transform: translateX(-200%); } /* Move para a terceira imagem */
-    97% { transform: translateX(-200%); } /* Fica na terceira imagem */
-    100% { transform: translateX(0); } /* Volta para a primeira para reiniciar o ciclo */
 }
 
 /*Seção de Vantagens*/
