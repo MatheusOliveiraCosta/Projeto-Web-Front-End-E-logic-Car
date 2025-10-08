@@ -8,14 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="icons\apple-touch-icon.png">
+    
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="cabecalho">
-        <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
-        <h1 class="titulo">E-Logic Car</h1>
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#modelos">Modelos</a></li>
@@ -26,32 +30,27 @@
     </header>
 
     <main>
-     <section class="banner">
-    <div class="carrossel-slide">
-        <img src="images\banner1.jpeg" alt="Carro elétrico prata">
-        <img src="images\banner2.jpeg" alt="SUV carro elétrico">
-        <img src="images\banner3.jpeg" alt="carros">
-    </div>
-    </section>
+       <section class="carrossel-container">
+            <div class="carrossel-slide">
+                <img src="./images/banner1.jpg" alt="Carro elétrico prata">
+            </div>
+       </section>
 
         <section id="vantagens" class="vantagens">
             <div class="vantagem-item">
-                <img src="icons\recycling.png" alt="Ícone de sustentabilidade" class="icone">
-                
+                <img src="./icons/recycling.png" alt="Ícone de sustentabilidade" class="icone">
                 <h3>Sustentabilidade</h3>
                 <p>Reduza sua pegada de carbono com veículos de emissão zero.</p>
             </div>
             
             <div class="vantagem-item">
-                <img src="icons\electric_car.png" alt="Ícone de economia" class="icone">
-                
+                <img src="./icons/electric_car.png" alt="Ícone de economia" class="icone">
                 <h3>Economia Real</h3>
                 <p>Economize em combustível e manutenção. A energia elétrica é mais barata e eficiente.</p>
             </div>
             
             <div class="vantagem-item">
-                 <img src="icons\speed.png" alt="Ícone de performance" class="icone">
-                
+                <img src="./icons/speed.png" alt="Ícone de performance" class="icone">
                 <h3>Performance</h3>
                 <p>Experimente a aceleração instantânea e uma direção silenciosa e poderosa.</p>
             </div>
