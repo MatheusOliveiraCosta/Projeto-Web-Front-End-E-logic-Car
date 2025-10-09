@@ -1,4 +1,4 @@
-/*reset*/
+/* --- Reset Básico --- */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-/*Estilos do cabeçalho de navegação*/
+/* --- Cabeçalho --- */
 .cabecalho {
     position: sticky;
     top: 0;
@@ -23,20 +23,24 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 40px;
-    background-color: rgb(255, 255, 255); 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /*sombra*/
+    padding: 10px 40px;
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o logo e o título */
 }
 
 .logo {
     width: 60px;
-    
 }
 
-.titulo{
-    margin-right: 839px;
+.titulo {
     font-size: 20px;
-
+    /* A margem fixa foi removida, o alinhamento agora é controlado pelo Flexbox do .cabecalho */
 }
 
 .cabecalho nav ul {
@@ -51,21 +55,21 @@ h1, h2, h3 {
     color: #1E88E5; 
 }
 
+
 .banner {
     width: 100%;
-    height: 60vh;
+    height: 75vh;
     overflow: hidden;
     position: relative;
     margin-bottom: 40px;
 }
 
-.carrossel-slide {
+.carrossel-slide img{
     display: flex;
-    width: 300%;
-    height: 100%;
+    width: 100%;
 }
 
-/*Seção de Vantagens*/
+/* --- Seção de Vantagens --- */
 .vantagens {
     display: flex;
     justify-content: center;
@@ -83,7 +87,7 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/*Rodapé*/
+/* --- Rodapé --- */
 .rodape {
     text-align: center;
     padding: 20px;
