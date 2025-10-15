@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - E-Logic Car</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#modelos">Modelos</a></li>
+                <li><a href="index.html#vantagens">Vantagens</a></li>
+                <li><a href="cadastro.html">Test-Drive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <form action="index.html" method="GET" class="form-card">
+            <h2>Bem-vindo de Volta!</h2>
+            <p class="form-subtitulo">Faça login para acessar sua conta</p>
+            
+            <div class="campo-form">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email_usuario" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha" required>
+            </div>
+            
+            <button type="submit" class="botao-principal form-botao">Entrar</button>
+
+            <p class="link-alternativo">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </form>
+    </main>
+    
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+        <a href="#">Política de Privacidade</a>
+    </footer>
+
+</body>
+</html>
