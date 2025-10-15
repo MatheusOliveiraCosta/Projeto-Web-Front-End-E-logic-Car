@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - E-Logic Car</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#modelos">Modelos</a></li>
+                <li><a href="index.html#vantagens">Vantagens</a></li>
+                <li><a href="cadastro.html">Test-Drive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+    
+        <form action="login.html" method="GET" class="form-card">
+            <h2>Crie sua Conta na E-Logic Car</h2>
+            <p class="form-subtitulo">Preencha seus dados para continuar</p>
+
+            <div class="campo-form">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome_usuario" placeholder="Digite seu nome completo" required>
+            </div>
+            
+            <div class="campo-form">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email_usuario" placeholder="exemplo@email.com" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="senha">Crie uma Senha</label>
+                <input type="password" id="senha" name="senha_usuario" placeholder="Pelo menos 6 caracteres" required>
+            </div>
+            
+            <div class="campo-form">
+                <label for="telefone">Telefone (Opcional)</label>
+                <input type="tel" id="telefone" name="telefone_usuario" placeholder="(XX) XXXXX-XXXX">
+            </div>
+
+            <div class="campo-form">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="data_nascimento" required>
+            </div>
+            
+            <button type="submit" class="botao-principal form-botao">Criar Conta</button>
+        </form>
+    </main>
+    
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+        <a href="#">Política de Privacidade</a>
+    </footer>
+
+</body>
+</html>
