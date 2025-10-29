@@ -79,11 +79,7 @@ e-logic-car/
 
 Você pode acessar a versão publicada do projeto através do GitHub Pages no link abaixo:
 
-> **[Acessar o site E-Logic Car]([LINK DO GITHUB PAGES])**
-
-#### Para rodar localmente:
-1.  Clone o repositório: `git clone [URL_DO_REPOSITORIO]`
-2.  Abra o arquivo `index.html` no seu navegador de preferência.
+> **[Acessar o site E-Logic Car][([LINK DO GITHUB PAGES])](https://matheusoliveiracosta.github.io/Projeto-Web-Front-End-E-logic-Car/)**
 
 ---
 
