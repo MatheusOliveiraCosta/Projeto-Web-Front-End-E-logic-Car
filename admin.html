@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - E-Logic Car</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="modelos.html">Modelos</a></li>
+                <!--Item Admin-->
+                <li><a href="admin.html" class="menu-ativo">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <h2 class="secao-titulo">Painel Administrativo</h2>
+
+        <!--Cadastro-->
+        <section class="admin-card">
+            <h3>Cadastrar Novo Usuário</h3>
+            <form id="form-admin">
+                <div class="campo-form">
+                    <label for="admin-nome">Nome do Usuário</label>
+                    <input type="text" id="admin-nome" placeholder="Nome completo" required>
+                </div>
+                
+                <div class="campo-form">
+                    <label for="admin-email">E-mail</label>
+                    <input type="email" id="admin-email" placeholder="email@exemplo.com" required>
+                </div>
+
+                <div class="admin-botoes">
+                    <button type="submit" class="botao-principal">Cadastrar</button>
+                    <button type="button" id="btn-limpar" class="botao-secundario">Limpar Campos</button>
+                </div>
+            </form>
+        </section>
+
+        <!--Lista e exclusão-->
+        <section class="lista-container">
+            <div class="lista-header">
+                <h3>Usuários Cadastrados</h3>
+                
+                <!--Excluir(quem está no array)-->
+                <button id="btn-excluir-tudo" class="botao-perigo">Excluir Todos</button>
+            </div>
+
+            <!--Pesquisa(quem está no array)-->
+            <div class="campo-pesquisa">
+                <input type="text" id="campo-pesquisa" placeholder="Pesquisar por nome ou e-mail...">
+            </div>
+
+            <!--Lista-->
+            <ul id="lista-usuarios" class="lista-visual">
+            </ul>
+            
+            <p id="mensagem-vazia" style="display: none; text-align: center; color: #777;">Nenhum usuário encontrado.</p>
+        </section>
+
+    </main>
+    
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
