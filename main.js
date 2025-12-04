@@ -3,9 +3,8 @@ console.log("--> O arquivo main.js começou a ser lido.");
 document.addEventListener('DOMContentLoaded', () => {
     console.log("--> O DOM (HTML) foi carregado completamente.");
 
-    // ============================================================
-    // 1. INTEGRAÇÃO CADASTRO -> ADMIN (Mantida)
-    // ============================================================
+    
+    //cadastro -> adm
     const formCadastro = document.getElementById('form-cadastro');
     if (formCadastro) {
         formCadastro.addEventListener('submit', (e) => {
@@ -35,19 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ============================================================
-    // 2. ACESSIBILIDADE (Lógica Blindada)
-    // ============================================================
-    
-    // Elementos do DOM
+   
+    //acessibilidade
     const body = document.body;
     
-    // Mapeamento dos botões (ID do HTML -> Função)
     const botoes = {
         'btn-alto-contraste': function() {
             console.log(">> Botão Alto Contraste Clicado");
             body.classList.toggle('alto-contraste');
-            // Salva a preferência
             const ativo = body.classList.contains('alto-contraste');
             localStorage.setItem('altoContraste', ativo);
         },
@@ -75,12 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Função auxiliar para mudar a fonte
     function alterarFonte(valor) {
         let tamAtual = parseInt(localStorage.getItem('tamanhoFonte')) || 100;
         let novoTam = tamAtual + valor;
 
-        // Limites de segurança (70% a 150%)
         if (novoTam >= 70 && novoTam <= 150) {
             document.documentElement.style.fontSize = `${novoTam}%`;
             localStorage.setItem('tamanhoFonte', novoTam);
@@ -88,17 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- INICIALIZAÇÃO ---
-    
-    // 1. Carregar preferências salvas ao abrir a página
     if (localStorage.getItem('altoContraste') === 'true') body.classList.add('alto-contraste');
     if (localStorage.getItem('textoEspacado') === 'true') body.classList.add('texto-espacado');
     
     let tamSalvo = parseInt(localStorage.getItem('tamanhoFonte'));
     if (tamSalvo) document.documentElement.style.fontSize = `${tamSalvo}%`;
 
-
-    // 2. Adicionar os eventos de clique aos botões
     console.log("--> Tentando encontrar os botões de acessibilidade...");
     
     let botõesEncontrados = 0;
@@ -106,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let id in botoes) {
         const elemento = document.getElementById(id);
         if (elemento) {
-            // Removemos onclick antigo e adicionamos listener novo
             elemento.onclick = null; 
             elemento.addEventListener('click', botoes[id]);
             botõesEncontrados++;

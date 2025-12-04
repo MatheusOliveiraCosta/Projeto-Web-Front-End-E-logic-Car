@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Elementos
     const formAdmin = document.getElementById('form-admin');
     const inputNome = document.getElementById('admin-nome');
     const inputEmail = document.getElementById('admin-email');
@@ -9,10 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const campoPesquisa = document.getElementById('campo-pesquisa');
     const btnLimpar = document.getElementById('btn-limpar');
 
-    // IMPORTANTE: Mesma chave usada no main.js
     const CHAVE_DB = 'elogic_db_usuarios';
-
-    // --- FUNÇÕES ---
 
     function lerDados() {
         return JSON.parse(localStorage.getItem(CHAVE_DB)) || [];
@@ -51,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Função Global para o botão onclick do HTML chamar
+    //Função Global para o botão onclick do HTML chamar
     window.deletarUsuario = function(id) {
         if(confirm("Excluir este usuário?")) {
             let usuarios = lerDados();
@@ -60,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
             renderizarLista(campoPesquisa.value);
         }
     };
-
-    // --- EVENTOS ---
 
     // Cadastrar pelo Admin
     formAdmin.addEventListener('submit', (e) => {
