@@ -337,3 +337,126 @@ h1, h2, h3 {
 .link-alternativo a:hover {
     text-decoration: underline;
 }
+
+/*Estilos de Acessibilidade*/
+.oculto {
+    display: none; /* O !important força o navegador a obedecer */
+    visibility: hidden;
+}
+
+.acessibilidade-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;     
+    z-index: 9999;   
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.btn-acessibilidade-icone {
+    background-color: #1E88E5; 
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.btn-acessibilidade-icone:hover {
+    transform: scale(1.1);
+}
+
+.menu-acessibilidade {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 180px;
+    margin-bottom: 10px;
+}
+
+.opcao-acessibilidade {
+    background: none;
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.opcao-acessibilidade:hover {
+    background-color: #f0f2f5;
+}
+
+/*modo alto contraste*/
+
+body.alto-contraste {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste footer,
+body.alto-contraste section,
+body.alto-contraste .card-oferta,
+body.alto-contraste .form-card,
+body.alto-contraste .admin-card,
+body.alto-contraste .lista-usuarios-container,
+body.alto-contraste .filtro-container,
+body.alto-contraste .filtro-container-modelos,
+body.alto-contraste input {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFF00 !important;
+}
+
+body.alto-contraste a,
+body.alto-contraste h1,
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste strong,
+body.alto-contraste .preco-valor {
+    color: #FFFF00 !important;
+    text-decoration: underline;
+}
+
+body.alto-contraste button,
+body.alto-contraste .botao-principal,
+body.alto-contraste .botao-secundario {
+    background-color: #FFFF00 !important;
+    color: #000000 !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: bold;
+}
+
+/*Espaçamento*/
+
+body.texto-espacado p,
+body.texto-espacado li,
+body.texto-espacado span,
+body.texto-espacado a,
+body.texto-espacado label,
+body.texto-espacado input {
+    line-height: 1.5 !important; 
+    letter-spacing: 0.12em !important; 
+    word-spacing: 0.16em !important; 
+}
+
+body.texto-espacado p {
+    margin-bottom: 2em !important; 
+}
