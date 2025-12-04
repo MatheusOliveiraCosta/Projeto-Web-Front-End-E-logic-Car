@@ -1,119 +1,101 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Elementos
     const formAdmin = document.getElementById('form-admin');
-    const nomeInput = document.getElementById('admin-nome');
-    const emailInput = document.getElementById('admin-email');
-    const btnLimpar = document.getElementById('btn-limpar');
+    const inputNome = document.getElementById('admin-nome');
+    const inputEmail = document.getElementById('admin-email');
     const listaUsuarios = document.getElementById('lista-usuarios');
     const btnExcluirTudo = document.getElementById('btn-excluir-tudo');
     const campoPesquisa = document.getElementById('campo-pesquisa');
-    const mensagemVazia = document.getElementById('mensagem-vazia');
+    const btnLimpar = document.getElementById('btn-limpar');
 
+    // IMPORTANTE: Mesma chave usada no main.js
     const CHAVE_DB = 'elogic_db_usuarios';
 
-    //Ler dados do LocalStorage
+    // --- FUNÇÕES ---
+
     function lerDados() {
-        const dados = localStorage.getItem(CHAVE_DB);
-        return dados ? JSON.parse(dados) : [];
+        return JSON.parse(localStorage.getItem(CHAVE_DB)) || [];
     }
 
-    //Salvar dados
     function salvarDados(dados) {
         localStorage.setItem(CHAVE_DB, JSON.stringify(dados));
     }
 
-    //Gerar data
-    function getDataAtual() {
-        const agora = new Date();
-        return agora.toLocaleString('pt-BR'); // Formato: dd/mm/aaaa hh:mm:ss
-    }
-
-    //RENDERIZAÇÃO
-
     function renderizarLista(filtro = '') {
         const usuarios = lerDados();
-        listaUsuarios.innerHTML = ''; 
+        listaUsuarios.innerHTML = '';
 
-        
-        const usuariosFiltrados = usuarios.filter(usuario => {
-            const termo = filtro.toLowerCase();
-            return usuario.nome.toLowerCase().includes(termo) || 
-                   usuario.email.toLowerCase().includes(termo);
-        });
+        const usuariosFiltrados = usuarios.filter(user => 
+            user.nome.toLowerCase().includes(filtro.toLowerCase()) || 
+            user.email.toLowerCase().includes(filtro.toLowerCase())
+        );
 
-        // mensagem se a lista estiver vazia
         if (usuariosFiltrados.length === 0) {
-            mensagemVazia.style.display = 'block';
-        } else {
-            mensagemVazia.style.display = 'none';
+            listaUsuarios.innerHTML = '<p style="text-align:center; color:#777;">Nenhum usuário encontrado.</p>';
+            return;
         }
 
-        usuariosFiltrados.forEach(usuario => {
+        usuariosFiltrados.forEach(user => {
             const li = document.createElement('li');
             li.className = 'item-lista';
-            
             li.innerHTML = `
                 <div class="info-item">
-                    <strong>${usuario.nome}</strong>
-                    <span>${usuario.email}</span>
-                    <small>Cadastrado em: ${usuario.data}</small>
+                    <strong>${user.nome}</strong>
+                    <span>${user.email}</span>
+                    <small>Em: ${user.data}</small>
                 </div>
-                <button class="botao-excluir-item" onclick="excluirItem(${usuario.id})">Excluir</button>
+                <button class="botao-excluir-item" onclick="deletarUsuario(${user.id})">Excluir</button>
             `;
-            
             listaUsuarios.appendChild(li);
         });
     }
 
-    //cadastrar localmente
-    formAdmin.addEventListener('submit', (e) => {
-        e.preventDefault(); 
-
-        const novoUsuario = {
-            id: Date.now(),
-            nome: nomeInput.value,
-            email: emailInput.value,
-            data: getDataAtual()
-        };
-
-        const usuarios = lerDados();
-        usuarios.push(novoUsuario);
-        salvarDados(usuarios);
-
-        alert('Usuário cadastrado com sucesso!');
-        formAdmin.reset(); 
-        renderizarLista(); 
-    });
-
-    //limpar campos
-    btnLimpar.addEventListener('click', () => {
-        formAdmin.reset();
-    });
-
-    //excluir item unico
-    window.excluirItem = function(id) {
-        if(confirm('Deseja realmente excluir este usuário?')) {
+    // Função Global para o botão onclick do HTML chamar
+    window.deletarUsuario = function(id) {
+        if(confirm("Excluir este usuário?")) {
             let usuarios = lerDados();
-            usuarios = usuarios.filter(usuario => usuario.id !== id);
-            
+            usuarios = usuarios.filter(u => u.id !== id);
             salvarDados(usuarios);
             renderizarLista(campoPesquisa.value);
         }
     };
 
-    //excluir todos os itens
+    // --- EVENTOS ---
+
+    // Cadastrar pelo Admin
+    formAdmin.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const novoUsuario = {
+            id: Date.now(),
+            nome: inputNome.value,
+            email: inputEmail.value,
+            data: new Date().toLocaleString('pt-BR')
+        };
+        const usuarios = lerDados();
+        usuarios.push(novoUsuario);
+        salvarDados(usuarios);
+        alert('Usuário cadastrado!');
+        formAdmin.reset();
+        renderizarLista();
+    });
+
+    // Limpar
+    btnLimpar.addEventListener('click', () => formAdmin.reset());
+
+    // Excluir Tudo
     btnExcluirTudo.addEventListener('click', () => {
-        if(confirm('ATENÇÃO: Isso apagará TODOS os usuários cadastrados. Continuar?')) {
+        if(confirm("ATENÇÃO: Apagar TODOS os usuários?")) {
             localStorage.removeItem(CHAVE_DB);
             renderizarLista();
         }
     });
 
-    //pesquisar itens
+    // Pesquisar
     campoPesquisa.addEventListener('input', (e) => {
-        const termo = e.target.value;
-        renderizarLista(termo);
+        renderizarLista(e.target.value);
     });
 
+    // Iniciar
     renderizarLista();
 });
