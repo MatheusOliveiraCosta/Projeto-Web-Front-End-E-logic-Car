@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,8 +22,14 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                
-                <li><a href="admin.html" class="menu-ativo">Admin</a></li>
+                <li><a href="modelos.html">Modelos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="admin.html" style="color: #e67e22;">Admin</a></li> <!-- Destaque -->
+                <li>
+                    <a href="carrinho.html" class="carrinho-link">
+                        🛒 <span id="contador-carrinho">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,45 +37,49 @@
     <main class="admin-container">
         <h2 class="secao-titulo">Painel Administrativo</h2>
 
+        <!-- 1. CARD DE CADASTRO -->
         <section class="admin-card">
             <h3>Cadastrar Novo Usuário</h3>
             <form id="form-admin">
                 <div class="campo-form">
                     <label for="admin-nome">Nome do Usuário</label>
-                    <input type="text" id="admin-nome" placeholder="Nome completo" required>
+                    <input type="text" id="admin-nome" placeholder="Digite o nome completo" required>
                 </div>
                 
                 <div class="campo-form">
                     <label for="admin-email">E-mail</label>
-                    <input type="email" id="admin-email" placeholder="email@exemplo.com" required>
+                    <input type="email" id="admin-email" placeholder="Digite o e-mail" required>
                 </div>
 
                 <div class="admin-botoes">
-                    <button type="submit" class="botao-principal">Cadastrar</button>
+                    <button type="submit" class="botao-principal">Cadastrar Usuário</button>
+                    <!-- Funcionalidade: Limpar Campos -->
                     <button type="button" id="btn-limpar" class="botao-secundario">Limpar Campos</button>
                 </div>
             </form>
         </section>
 
-        <!--Lista e exclusão-->
-        <section class="lista-container">
+        <!-- 2. CARD DE LISTAGEM E PESQUISA -->
+        <section class="admin-card">
             <div class="lista-header">
                 <h3>Usuários Cadastrados</h3>
-                
-                <!--Excluir(quem está no array)-->
+                <!-- Funcionalidade: Excluir Todos -->
                 <button id="btn-excluir-tudo" class="botao-perigo">Excluir Todos</button>
             </div>
 
-            <!--Pesquisa(quem está no array)-->
+            <!-- Funcionalidade: Pesquisa -->
             <div class="campo-pesquisa">
-                <input type="text" id="campo-pesquisa" placeholder="Pesquisar por nome ou e-mail...">
+                <input type="text" id="campo-pesquisa" placeholder="🔍 Pesquisar por nome ou e-mail...">
             </div>
 
-            <!--Lista-->
+            <!-- Lista Não Ordenada (Onde os dados aparecerão) -->
             <ul id="lista-usuarios" class="lista-visual">
+                <!-- Os itens serão inseridos aqui pelo JavaScript (admin.js) -->
             </ul>
             
-            <p id="mensagem-vazia" style="display: none; text-align: center; color: #777;">Nenhum usuário encontrado.</p>
+            <p id="mensagem-vazia" style="display: none; text-align: center; color: #777; margin-top: 20px;">
+                Nenhum usuário encontrado no sistema.
+            </p>
         </section>
 
     </main>
@@ -77,8 +88,7 @@
         <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="admin.js"></script>
-
+    <!-- BARRA DE ACESSIBILIDADE -->
     <div class="acessibilidade-container">
         <button id="btn-acessibilidade-toggle" class="btn-acessibilidade-icone" aria-label="Abrir menu de acessibilidade">
             ♿
@@ -103,6 +113,9 @@
         </div>
     </div>
 
+    <script src="admin.js"></script>
+    
+    <!-- Script Principal (para o contador do carrinho e acessibilidade) -->
     <script src="main.js"></script>
 </body>
 </html>
