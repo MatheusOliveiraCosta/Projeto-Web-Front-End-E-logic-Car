@@ -455,3 +455,118 @@ body.alto-contraste * {
     color: yellow !important;
     border-color: yellow !important;
 }
+
+.container-carrinho {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 400px; /* Garante altura mínima se estiver vazio */
+}
+
+/* Lista de Itens */
+#lista-itens-carrinho {
+    margin-bottom: 30px;
+}
+
+/* Item Individual do Carrinho */
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+/* Imagem Pequena do Carro no Carrinho */
+.img-carrinho {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+/* Informações do Carro (Nome e Preço) */
+.info-carrinho {
+    flex-grow: 1; /* Ocupa o espaço disponível no meio */
+}
+
+.info-carrinho h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-carrinho p {
+    font-size: 1.1rem;
+    color: #1E88E5; /* Azul do tema */
+    font-weight: bold;
+}
+
+/* Botão de Remover (Vermelho) */
+.btn-remover-carrinho {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-remover-carrinho:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Área de Resumo e Total */
+.resumo-carrinho {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f2f5;
+    text-align: right; /* Alinha tudo à direita */
+}
+
+.total-linha {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* Botões de Ação (Continuar e Finalizar) */
+.acoes-carrinho {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.acoes-carrinho .botao-secundario,
+.acoes-carrinho .botao-principal {
+    width: auto; /* Remove a largura de 100% padrão dos botões */
+    padding: 12px 30px;
+}
+
+/* Mensagem de Carrinho Vazio */
+.msg-vazio {
+    text-align: center;
+    color: #777;
+    margin-top: 80px;
+    font-size: 1.2rem;
+}
+
+button.btn-adicionar-carrinho {
+    margin-top: 10px;
+}

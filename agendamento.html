@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Test-Drive - E-Logic Car</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#modelos">Modelos</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-container">
+        <!-- ID PARA O JS ENCONTRAR O FORMULÁRIO -->
+        <form id="form-agendamento" class="form-card">
+            <h2 id="titulo-agendamento">Agende seu Test-Drive</h2>
+            <p class="form-subtitulo">Experimente o futuro da condução elétrica.</p>
+
+            <!-- Campo Automático (Somente Leitura) -->
+            <div class="campo-form">
+                <label for="modelo-carro">Modelo de Interesse</label>
+                <input type="text" id="modelo-carro" name="modelo" readonly style="background-color: #f0f0f0; font-weight: bold; color: #1E88E5;">
+            </div>
+
+            <div class="campo-form">
+                <label for="nome">Seu Nome</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome completo">
+            </div>
+            
+            <div class="campo-form">
+                <label for="data-agendamento">Data Preferida</label>
+                <input type="date" id="data-agendamento" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" required placeholder="(XX) XXXXX-XXXX">
+            </div>
+            
+            <button type="submit" class="botao-principal">Confirmar Agendamento</button>
+        </form>
+    </main>
+    
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- BARRA DE ACESSIBILIDADE (Copiada para manter padrão) -->
+    <div class="acessibilidade-container">
+        <button id="btn-acessibilidade-toggle" class="btn-acessibilidade-icone" aria-label="Abrir menu de acessibilidade">
+            ♿
+        </button>
+        
+        <div id="menu-acessibilidade" class="menu-acessibilidade oculto">
+            <button id="btn-alto-contraste" class="opcao-acessibilidade">
+                <span>🌓</span> Alto Contraste
+            </button>
+            <button id="btn-aumentar-fonte" class="opcao-acessibilidade">
+                <span>A+</span> Aumentar Fonte
+            </button>
+            <button id="btn-diminuir-fonte" class="opcao-acessibilidade">
+                <span>A-</span> Diminuir Fonte
+            </button>
+            <button id="btn-espacamento" class="opcao-acessibilidade">
+                <span>↔️</span> Espaçamento (Texto)
+            </button>
+            <button id="btn-resetar-acessibilidade" class="opcao-acessibilidade">
+                <span>↺</span> Restaurar Padrão
+            </button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

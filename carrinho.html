@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - E-Logic Car</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-carrinho"> 
+
+    <header class="cabecalho">
+        <div class="logo-titulo">
+            <img class="logo" src="./icons/logo_image.png" alt="Logo da E-Logic Car">
+            <h1 class="titulo">E-Logic Car</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#vantagens">Vantagens</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li>
+                    <a href="carrinho.html" class="carrinho-link ativo">
+                        🛒 <span id="contador-carrinho">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-carrinho">
+        <h2 class="secao-titulo">Seu Carrinho de Compras</h2>
+
+        <div id="lista-itens-carrinho">
+        <!--itens do carrinho-->
+        </div>
+
+        <div class="resumo-carrinho">
+            <div class="total-linha">
+                <span>Total Estimado:</span>
+                <span id="preco-total-carrinho">R$ 0,00</span>
+            </div>
+            
+            <div class="acoes-carrinho">
+                <a href="index.html" class="botao-secundario">Continuar Escolhendo</a>
+                <button id="btn-finalizar-compra" class="botao-principal">Finalizar Compra (Simulação)</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="rodape">
+        <p>© 2025 E-Logic Car. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="acessibilidade-container">
+        <button id="btn-acessibilidade-toggle" class="btn-acessibilidade-icone" aria-label="Abrir menu de acessibilidade">
+            ♿
+        </button>
+        
+        <div id="menu-acessibilidade" class="menu-acessibilidade oculto">
+            <button id="btn-alto-contraste" class="opcao-acessibilidade">
+                <span>🌓</span> Alto Contraste
+            </button>
+            <button id="btn-aumentar-fonte" class="opcao-acessibilidade">
+                <span>A+</span> Aumentar Fonte
+            </button>
+            <button id="btn-diminuir-fonte" class="opcao-acessibilidade">
+                <span>A-</span> Diminuir Fonte
+            </button>
+            <button id="btn-espacamento" class="opcao-acessibilidade">
+                <span>↔️</span> Espaçamento (Texto)
+            </button>
+            <button id="btn-resetar-acessibilidade" class="opcao-acessibilidade">
+                <span>↺</span> Restaurar Padrão
+            </button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
