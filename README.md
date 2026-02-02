@@ -10,7 +10,7 @@
 
 ![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow)
 
-> Projeto 1 de HTML e CSS: Uma plataforma de e-commerce conceitual para veículos elétricos, focada em promover a mobilidade sustentável e educar o consumidor sobre os benefícios da eletrificação.
+> Projeto 2 de HTML, CSS, Javascript: Uma plataforma de e-commerce conceitual para veículos elétricos, focada em promover a mobilidade sustentável e educar o consumidor sobre os benefícios da eletrificação, integrando tela de cadastro e login e administração de usuários cadastrados.
 
 ---
 
@@ -28,11 +28,16 @@
 
 ## 📖 Descrição do Projeto
 
-**E-Logic Car** é uma plataforma web desenvolvida como parte do Projeto 1 da disciplina de Programação Web Front-End. O site funciona como a vitrine de um e-commerce de carros elétricos, mas seu objetivo principal vai além da venda: buscamos ser um portal educativo que desmistifica a tecnologia dos veículos elétricos e reforça sua importância para um futuro mais sustentável.
+**E-Logic Car** é uma plataforma web desenvolvida como parte do Projeto 2 da disciplina de Programação Web Front-End. O site funciona como a vitrine de um e-commerce de carros elétricos, mas seu objetivo principal vai além da venda: buscamos ser um portal educativo que desmistifica a tecnologia dos veículos elétricos e reforça sua importância para um futuro mais sustentável.
 
-O projeto consiste em duas páginas principais:
+O projeto consiste em seis páginas principais:
 1.  **Página Principal:** Apresenta a missão da E-Logic Car, as vantagens da mobilidade elétrica e os modelos de veículos disponíveis.
-2.  **Página de Cadastro:** Permite que o usuário interessado solicite um orçamento ou agende um test-drive, iniciando o contato com a empresa.
+2.  **Página de Cadastro:** Permite que o usuário faça um cadastro no site.
+3.  **Página de Login:** Permite que o usuário ja cadastrado inicie a navegação em sua conta.
+4.  **Página do Admin:** Permite que o administrador gerencie os usuários.
+5.  **Página do Carrinho:** Permite que o usuário gerencie seu carrinho de compras.
+6.  **Página de agendamento:** Permite que o usuário marque um agendamento para testar o carro escolhido.
+7.  **Página dos modelos:** Mostra ao usuário o modelo que ele escolheu clicar no filtro de pesquisa.
 
 ---
 
@@ -43,36 +48,24 @@ O projeto consiste em duas páginas principais:
 * **Formulário de Cadastro:** Uma página para capturar o interesse de potenciais clientes, com campos para contato e escolha do modelo.
 * **Campo de login:** Se o usuario quiser comprar um carro terá que fazer o login.
 * **Código Validado:** O código-fonte (HTML e CSS) foi validado utilizando as ferramentas oficiais do W3C, garantindo boas práticas de desenvolvimento.
+* **Painel de agendamento:** Permite o usuário marcar um agendamento pessoal para testar o carro escolhido no botão (Tenho Interesse) do card de compra.
+* **Painel administrativo:** Permite o administrador gerenciar os usuarios com base no gerenciamento de perfil (CRUD).
+* **Sistema de compra:** Permite o usuário adicionar um carro no carrinho para comfirmar sua compra.
+* **Menu de acessibilidade:** Permite um usuário com necessidades especiais se adaptar ao site de acordo com as opções disponíveis.
+  
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **HTML5:** Utilizado para a estruturação semântica do conteúdo.
 * **CSS3:** Utilizado para a estilização, layout e design das páginas.
+* **Javascript:** Utilizado para a estilização, lógica da administração de usuários, funcionamento do menu de acessibilidade.
 
 #### Validação
 O código foi validado de acordo com os seguintes critérios:
 * **HTML:** [W3C HTML Validator](https://validator.w3.org/)
 * **CSS:** [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)
-
-## 📁 Estrutura do Projeto
-
-A estrutura de arquivos foi organizada da seguinte forma:
-
-```
-e-logic-car/
-├── index.html              # Página principal
-├── cadastro.html           # Página de cadastro
-├── login.html              # Página de login
-├── style.css       # Folha de estilos principal
-    ├── images/
-    │   ├── ...
-    │   ├── ...
-    │   └── ...
-    └── icons/
-        ├── ...
-```
-
+  
 ---
 
 ## 🚀 Acesso ao Projeto
