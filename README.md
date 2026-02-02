@@ -8,7 +8,7 @@
 
 * **Matheus Oliveira Costa**
 
-![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/completo-green)
 
 > Projeto 2 de HTML, CSS, Javascript: Uma plataforma de e-commerce conceitual para veículos elétricos, focada em promover a mobilidade sustentável e educar o consumidor sobre os benefícios da eletrificação, integrando tela de cadastro e login e administração de usuários cadastrados.
 
